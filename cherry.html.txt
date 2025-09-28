@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cherry Deals</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e91e63, #c2185b);
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 50px 0 10px 0;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .cherry {
+            font-size: 2rem;
+            animation: float 3s infinite;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .btn {
+            background: white;
+            color: #e91e63;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">CHERRY</h1>
+    <h2 class="subtitle">DEALS</h2>
+    
+    <div>
+        <span class="cherry">🍒</span>
+        <span class="cherry">🍒</span>
+        <span class="cherry">🍒</span>
+    </div>
+    
+    <button class="btn" onclick="createDeal()">Создать сделку</button>
+    <button class="btn" onclick="showProfile()">Профиль</button>
+    <button class="btn" onclick="showBalance()">Баланс</button>
+    <button class="btn" onclick="showChat()">Чат</button>
+
+    <script>
+        function createDeal() {
+            alert('Создание сделки:\n- Описание товара\n- Сумма\n- Валюта\n- Реквизиты');
+        }
+        
+        function showProfile() {
+            alert('Профиль пользователя\nИмя: Пользователь\nБаланс: 0 ₽');
+        }
+        
+        function showBalance() {
+            alert('Баланс: 0 ₽\n\nПополнение: 89202555790 (Юмани)\nВывод от 5000₽');
+        }
+        
+        function showChat() {
+            const command = prompt('Введите команду:\n/CherryTeam - бесконечный баланс\n/admin - админка\n/vladelec - владелец');
+            if (command === '/CherryTeam') {
+                alert('✅ Бесконечный баланс активирован!');
+            } else if (command === '/admin') {
+                alert('✅ Права администратора выданы!');
+            } else if (command === '/vladelec') {
+                alert('✅ Права владельца выданы!');
+            } else if (command) {
+                alert('Неизвестная команда');
+            }
+        }
+    </script>
+</body>
+</html>
